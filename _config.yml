@@ -1,6 +1,6 @@
 # Theme settings
 doks:
-    baseurl: 
+    baseurl: /Site
     color_theme: blue
     header:
         logo:
