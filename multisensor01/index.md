@@ -5,7 +5,7 @@ keywords:
 comments: false
 
 # Hero section
-title: ESP32 MultiSensor 01
+title: ESP32 MultiSensor (MS01)
 description: A ESP32 based device for a variety of presence and environmental sensors. 
 
 # Author box
@@ -27,6 +27,7 @@ micro_nav: true
 #        content: Next page
 #        url: '#'
 ---
+
 
 <h2>Configuration</h2>
 <p>Dox have a lot of personalization options. Here you can go through every single one available in our theme and set it up properly.</p>
