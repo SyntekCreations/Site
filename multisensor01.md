@@ -47,28 +47,5 @@ micro_nav: true
     <p>When you run <code>jekyll serve</code>, your <code>baseurl</code> variable shouldn’t render at all in any pages.</p>
     <p>We’ll set Jekyll to only render <code>baseurl</code> variable when its environment is set to production.</p>
     <p>So then, how do you get the <code>baseurl</code> variable to only show up on a production environment? When building your Jekyll project with <code>jekyll build</code>, you’ll want to prefix it with <code>JEKYLL_ENV=production</code> so the complete command looks like this one: <code>JEKYLL_ENV=production jekyll build</code></p>
-    <h2>Title</h2>
-    <!-- content of Title section -->
-    <h2>Theme color</h2>
-    <!-- content of Theme color section -->
-    <h2>Language</h2>
-    <!-- content of Language section -->
-    <h2>Header</h2>
-    <h3>Logo</h3>
-    <!-- content of Logo section -->
-    <h3>Navigation</h3>
-    <!-- content of Navigation section -->
-    <h3>CTA</h3>
-    <!-- content of CTA section -->
-    <h2>Footer</h2>
-    <h3>Logo</h3>
-    <!-- content of Footer Logo section -->
-    <h3>Copyright</h3>
-    <!-- content of Copyright section -->
-    <h2>Google Analytics</h2>
-    <!-- content of Google Analytics section -->
-    <h2>Disqus comments</h2>
-    <!-- content of Disqus comments section -->
-    <h2>Favicon</h2>
-    <!-- content of Favicon section -->
+
 </body>
