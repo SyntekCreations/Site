@@ -8,7 +8,7 @@
       "chipFamily": "ESP32",
       "parts": [
         {
-          "path": "././MS01-bin-ha/MS01-ha.bin",
+          "path": "./MS01-bin-ha/MS01-ha.bin",
           "offset": 0
         }
       ]
