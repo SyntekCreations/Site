@@ -38,8 +38,10 @@ micro_nav: true
     <p>If you’re deploying to server where your site is not going to be in root directory, you should setup <code>baseurl</code> variable.</p>
     <p>For example, if your site is going to be stored on URL that looks like this - <code>http://example.com/project</code>, you’ll have to update your <code>baseurl</code> variable and it should look like this:</p>
     <div class="example">
-        <pre><code>dox:
-        baseurl: /project</code></pre>
+    ```
+    dox:
+        baseurl: /project
+    ```
     </div>
     <h3>Build site with environment variable!</h3>
     <p>When you run <code>jekyll serve</code>, your <code>baseurl</code> variable shouldn’t render at all in any pages.</p>
