@@ -35,5 +35,5 @@ micro_nav: true
 ></script>
 <h3>Install for Home Assistant</h3>
 <esp-web-install-button
-  manifest="./ms01-ha.manifest"
+  manifest=./ms01-ha.manifest
 ></esp-web-install-button>
