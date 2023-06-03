@@ -35,5 +35,5 @@ micro_nav: true
 ></script>
 <h3>Install for Home Assistant</h3>
 <esp-web-install-button
-  manifest="https://firmware.esphome.io/esphome-web/manifest.json"
+  manifest="./ms01-ha.manifest"
 ></esp-web-install-button>
