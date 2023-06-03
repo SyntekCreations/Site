@@ -5,12 +5,12 @@ doks:
     header:
         logo:
             text: Syntek Creations - Site
-            image: logo.png
+            image: 
         nav:
             - item_name: Homepage
-              item_url: 'https://syntekcreations.github.io/Site/'
+              item_url: "https://syntekcreations.github.io/Site/"
             - item_name: Github
-              item_url: 'https://github.com/SyntekCreations'
+              item_url: "https://github.com/SyntekCreations"
             - item_name: Item 3
               item_url: '#'
     footer:
