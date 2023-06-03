@@ -1,19 +1,12 @@
 ---
 # Page settings
-layout: homepage
+layout: default
 keywords:
+comments: false
 
 # Hero section
-title: Syntek Creations - Documentation
-description: Smart Home products for Home Assistant
-#buttons:
-#    - content: Button
-#      url: '#'
-#      external_url: false
-    - icon: github
-      content: Visit our Github
-      url: 'https://github.com/SyntekCreations'
-      external_url: true
+title: ESP32 MultiSensor 01
+description: A ESP32 based device for a variety of presence and environmental sensors. 
 
 # Author box
 #author:
@@ -22,10 +15,17 @@ description: Smart Home products for Home Assistant
 #    external_url: true
 #    description: Author description
 
-# Grid navigation
-grid_navigation:
-    - title: Grid navigation
-      excerpt: Section description
-      cta: Read more
-      url: '#'
+# Micro navigation
+micro_nav: true
+
+# Page navigation
+page_nav:
+    prev:
+        content: Previous page
+        url: '#'
+    next:
+        content: Next page
+        url: '#'
 ---
+
+Write your markdown here ...
