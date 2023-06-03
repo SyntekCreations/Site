@@ -8,9 +8,11 @@ doks:
             image: 
         nav:
             - item_name: Homepage
-              item_url: "https://syntekcreations.github.io/Site/"
+              item_url: 'https://syntekcreations.github.io/Site/'
+              external_url: true
             - item_name: Github
-              item_url: "https://github.com/SyntekCreations"
+              item_url: 'https://github.com/SyntekCreations'
+              external_url: true
             - item_name: Item 3
               item_url: '#'
     footer:
