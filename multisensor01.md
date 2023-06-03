@@ -28,8 +28,6 @@ micro_nav: true
 #        url: '#'
 ---
 
-Write your markdown here ...
-
 <body>
     <h2>Configuration</h2>
     <p>Dox have a lot of personalization options. Here you can go through every single one available in our theme and set it up properly.</p>
