@@ -73,12 +73,12 @@ micro_nav: true
   <fieldset>
     <legend>Hardware Revision</legend>
     <label><input type="radio" name="version" value="ms1_rev_1.0"> MS01 - Rev 1.0</label>
-    <label><input type="radio" name="version" value="ms1_rev_1.1" checked> MS01 - Rev 1.1</label>
+    <label><input type="radio" name="version" value="ms1_rev_1.1"> MS01 - Rev 1.1</label>
   </fieldset>
 
   <fieldset>
     <legend>mmWave Sensor Options</legend>
-    <label><input type="radio" name="sensor" value="dfrobot_sen0395" checked> DFRobot SEN0395 Sensor</label>
+    <label><input type="radio" name="sensor" value="dfrobot_sen0395"> DFRobot SEN0395 Sensor</label>
     <label><input type="radio" name="sensor" value="hlk_sensor"> HLK Sensor</label>
     <label><input type="radio" name="sensor" value="seeed_studio_sensor"> Seeed Studio Sensor</label>
   </fieldset>
