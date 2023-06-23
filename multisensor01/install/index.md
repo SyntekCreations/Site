@@ -66,18 +66,18 @@ micro_nav: true
 </style>
 
 <h2>Install/Update your MultiSensor</h2>
-<p>Follow the guide below to install the latest firmware on your MultiSensor</p>
+<p>Follow the guide below to install the latest firmware on your MultiSensor ready for Home Assistant</p>
 
-<h3>Select board version and sensor</h3>
+<h3>Select hardware revision and mmWave sensor</h3>
 <form id="software-form">
   <fieldset>
-    <legend>Version</legend>
-    <label><input type="radio" name="version" value="ms1_rev_1.0"> MS1 - Rev 1.0</label>
-    <label><input type="radio" name="version" value="ms1_rev_1.1" checked> MS1 - Rev 1.1</label>
+    <legend>Hardware Revision</legend>
+    <label><input type="radio" name="version" value="ms1_rev_1.0"> MS01 - Rev 1.0</label>
+    <label><input type="radio" name="version" value="ms1_rev_1.1" checked> MS01 - Rev 1.1</label>
   </fieldset>
 
   <fieldset>
-    <legend>Sensor Options</legend>
+    <legend>mmWave Sensor Options</legend>
     <label><input type="radio" name="sensor" value="dfrobot_sen0395" checked> DFRobot SEN0395 Sensor</label>
     <label><input type="radio" name="sensor" value="hlk_sensor"> HLK Sensor</label>
     <label><input type="radio" name="sensor" value="seeed_studio_sensor"> Seeed Studio Sensor</label>
@@ -85,7 +85,7 @@ micro_nav: true
 </form>
 
 
-<h3>Install for Home Assistant</h3>
+<h3>Install</h3>
 <p class="button-row" align="left">
   <esp-web-install-button></esp-web-install-button>
 </p>
