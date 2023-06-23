@@ -35,7 +35,7 @@ micro_nav: true
 
   #software-form {
     width: 300px;
-    margin: 0 auto;
+    margin-left: 20px;
     padding: 20px;
     background-color: #f0f0f0;
     border-radius: 5px;
@@ -98,9 +98,28 @@ micro_nav: true
 
 
 <script>
-  const softwareForm = document.getElementById("software-form");
-  const button = document.querySelector("esp-web-install-button");
+  const versionRadios = document.getElementsByName("version");
   const sensorOptions = document.getElementById("sensor-options");
+  const button = document.querySelector("esp-web-install-button");
+
+  // Hide Seeed Studio Sensor option initially
+  sensorOptions.querySelector('input[value="seeed_studio_sensor"]').style.display = "none";
+
+  // Add event listener to version radios
+  for (let i = 0; i < versionRadios.length; i++) {
+    versionRadios[i].addEventListener("change", function() {
+      if (this.checked && this.value === "ms1_rev_1.0") {
+        // Hide Seeed Studio Sensor option for MS1 - Rev 1.0
+        sensorOptions.querySelector('input[value="seeed_studio_sensor"]').style.display = "none";
+      } else {
+        // Show Seeed Studio Sensor option for other versions
+        sensorOptions.querySelector('input[value="seeed_studio_sensor"]').style.display = "block";
+      }
+    });
+  }
+
+  // Event listener for form submission
+  const softwareForm = document.getElementById("software-form");
 
   softwareForm.addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent form submission
@@ -151,18 +170,4 @@ micro_nav: true
       console.log("Please select a version and sensor option.");
     }
   });
-
-  // Add event listener to version radios to toggle Seeed Studio Sensor option
-  const versionRadios = document.getElementsByName("version");
-  for (let i = 0; i < versionRadios.length; i++) {
-    versionRadios[i].addEventListener("change", function() {
-      if (this.checked && this.value === "ms1_rev_1.0") {
-        // Hide Seeed Studio Sensor option for MS1 - Rev 1.0
-        sensorOptions.querySelector('input[value="seeed_studio_sensor"]').style.display = "none";
-      } else {
-        // Show Seeed Studio Sensor option for other versions
-        sensorOptions.querySelector('input[value="seeed_studio_sensor"]').style.display = "block";
-      }
-    });
-  }
 </script>
