@@ -68,7 +68,7 @@ micro_nav: true
 <h2>Install/Update your MultiSensor</h2>
 <p>Follow the guide below to install the latest firmware on your MultiSensor ready for Home Assistant</p>
 
-<h3>Select hardware revision and mmWave sensor</h3>
+<h3>Select Hardware Revision and Sensor</h3>
 <form id="software-form">
   <fieldset>
     <legend>Hardware Revision</legend>
