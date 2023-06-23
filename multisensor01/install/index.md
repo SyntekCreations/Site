@@ -135,9 +135,6 @@ micro_nav: true
     // Set the manifest attribute of the button
     if (fileName) {
       button.manifest = `./${fileName}`;
-      console.log("Installing software with file name:", fileName);
-    } else {
-      console.log("Please select a version and sensor option.");
     }
   }
 </script>
