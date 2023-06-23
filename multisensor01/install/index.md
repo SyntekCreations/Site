@@ -27,6 +27,44 @@ micro_nav: true
 #        content: Next page
 #        url: '#'
 ---
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  #software-form {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  fieldset {
+    border: none;
+    margin: 10px 0;
+  }
+
+  legend {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+</style>
+
 <h2>Install/Update your MultiSensor</h2>
 <p>Follow the guide below to install the latest firmware on your MultiSensor</p>
 
@@ -34,17 +72,18 @@ micro_nav: true
 <form id="software-form">
   <fieldset>
     <legend>Version</legend>
-    <input type="radio" name="version" value="ms1_rev_1.0"> MS1 - Rev 1.0<br>
-    <input type="radio" name="version" value="ms1_rev_1.1"> MS1 - Rev 1.1<br>
+    <label><input type="radio" name="version" value="ms1_rev_1.0"> MS1 - Rev 1.0</label>
+    <label><input type="radio" name="version" value="ms1_rev_1.1"> MS1 - Rev 1.1</label>
   </fieldset>
 
   <fieldset>
     <legend>Sensor Options</legend>
-    <input type="radio" name="sensor" value="dfrobot_sen0395"> DFRobot SEN0395 Sensor<br>
-    <input type="radio" name="sensor" value="hlk_sensor"> HLK Sensor<br>
-    <input type="radio" name="sensor" value="seeed_studio_sensor"> Seeed Studio Sensor<br>
+    <label><input type="radio" name="sensor" value="dfrobot_sen0395"> DFRobot SEN0395 Sensor</label>
+    <label><input type="radio" name="sensor" value="hlk_sensor"> HLK Sensor</label>
+    <label><input type="radio" name="sensor" value="seeed_studio_sensor"> Seeed Studio Sensor</label>
   </fieldset>
 </form>
+
 
 <h3>Install for Home Assistant</h3>
 <p class="button-row" align="left">
@@ -61,6 +100,7 @@ micro_nav: true
 <script>
   const softwareForm = document.getElementById("software-form");
   const button = document.querySelector("esp-web-install-button");
+  const sensorOptions = document.getElementById("sensor-options");
 
   softwareForm.addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent form submission
@@ -111,4 +151,18 @@ micro_nav: true
       console.log("Please select a version and sensor option.");
     }
   });
+
+  // Add event listener to version radios to toggle Seeed Studio Sensor option
+  const versionRadios = document.getElementsByName("version");
+  for (let i = 0; i < versionRadios.length; i++) {
+    versionRadios[i].addEventListener("change", function() {
+      if (this.checked && this.value === "ms1_rev_1.0") {
+        // Hide Seeed Studio Sensor option for MS1 - Rev 1.0
+        sensorOptions.querySelector('input[value="seeed_studio_sensor"]').style.display = "none";
+      } else {
+        // Show Seeed Studio Sensor option for other versions
+        sensorOptions.querySelector('input[value="seeed_studio_sensor"]').style.display = "block";
+      }
+    });
+  }
 </script>
