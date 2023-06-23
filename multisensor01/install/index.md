@@ -96,56 +96,26 @@ micro_nav: true
   src="https://unpkg.com/esp-web-tools@9/dist/web/install-button.js?module"
 ></script>
 
-
 <script>
   const versionRadios = document.getElementsByName("version");
-  const sensorOptions = document.querySelector("#software-form fieldset:nth-of-type(2)");
+  const sensorRadios = document.getElementsByName("sensor");
   const button = document.querySelector("esp-web-install-button");
 
-  // Hide Seeed Studio Sensor option initially
-  sensorOptions.querySelector('input[value="seeed_studio_sensor"]').style.display = "none";
-
-  // Add event listener to version radios
+  // Add event listeners to version and sensor radios
   for (let i = 0; i < versionRadios.length; i++) {
-    versionRadios[i].addEventListener("change", function() {
-      if (this.checked && this.value === "ms1_rev_1.0") {
-        // Hide Seeed Studio Sensor option for MS1 - Rev 1.0
-        sensorOptions.querySelector('input[value="seeed_studio_sensor"]').style.display = "none";
-      } else {
-        // Show Seeed Studio Sensor option for other versions
-        sensorOptions.querySelector('input[value="seeed_studio_sensor"]').style.display = "block";
-      }
-    });
+    versionRadios[i].addEventListener("change", handleSelectionChange);
+  }
+  for (let i = 0; i < sensorRadios.length; i++) {
+    sensorRadios[i].addEventListener("change", handleSelectionChange);
   }
 
-  // Event listener for form submission
-  const softwareForm = document.getElementById("software-form");
-
-  softwareForm.addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent form submission
-
-    const versionRadios = document.getElementsByName("version");
-    const sensorRadios = document.getElementsByName("sensor");
-    let selectedVersion, selectedSensor;
-
-    // Find the selected version
-    for (let i = 0; i < versionRadios.length; i++) {
-      if (versionRadios[i].checked) {
-        selectedVersion = versionRadios[i].value;
-        break;
-      }
-    }
-
-    // Find the selected sensor
-    for (let i = 0; i < sensorRadios.length; i++) {
-      if (sensorRadios[i].checked) {
-        selectedSensor = sensorRadios[i].value;
-        break;
-      }
-    }
+  // Function to handle selection change
+  function handleSelectionChange() {
+    const selectedVersion = document.querySelector('input[name="version"]:checked').value;
+    const selectedSensor = document.querySelector('input[name="sensor"]:checked').value;
+    let fileName;
 
     // Generate the software file name based on selected options
-    let fileName;
     if (selectedVersion === "ms1_rev_1.0") {
       if (selectedSensor === "dfrobot_sen0395") {
         fileName = "MS1-Rev1.0-SEN0395-manifest.json";
@@ -169,5 +139,5 @@ micro_nav: true
     } else {
       console.log("Please select a version and sensor option.");
     }
-  });
+  }
 </script>
