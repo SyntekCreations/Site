@@ -99,7 +99,7 @@ micro_nav: true
 
 <script>
   const versionRadios = document.getElementsByName("version");
-  const sensorOptions = document.getElementById("sensor-options");
+  const sensorOptions = document.querySelector("#software-form fieldset:nth-of-type(2)");
   const button = document.querySelector("esp-web-install-button");
 
   // Hide Seeed Studio Sensor option initially
