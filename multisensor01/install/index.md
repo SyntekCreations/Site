@@ -29,6 +29,22 @@ micro_nav: true
 ---
 <h2>Install/Update your MultiSensor</h2>
 <p>Follow the guide below to install the latest firmware on your MultiSensor</p>
+
+<form>
+  <input type="radio" name="version" value="ms1_rev_1.0"> MS1 - Rev 1.0<br>
+  <input type="radio" name="version" value="ms1_rev_1.1"> MS1 - Rev 1.1<br>
+
+  <div id="sensor-options">
+    <input type="radio" name="sensor" value="dfrobot_sen0395"> DFRobot SEN0395 Sensor<br>
+    <input type="radio" name="sensor" value="hlk_sensor"> HLK Sensor<br>
+    <input type="radio" name="sensor" value="seeed_studio_sensor"> Seeed Studio Sensor<br>
+  </div>
+
+  <input type="submit" value="Submit">
+</form>
+
+
+
 <script
   type="module"
   src="https://unpkg.com/esp-web-tools@9/dist/web/install-button.js?module"
